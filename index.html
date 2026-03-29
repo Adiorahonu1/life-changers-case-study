@@ -1024,6 +1024,106 @@
       .sticky-label      { display: none; }
     }
 
+    /* ═══════════════════════════════════════════════════════════
+       SERVICES SECTION
+    ══════════════════════════════════════════════════════════════ */
+    #services {
+      background: var(--cream);
+    }
+    .services-header {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto 3rem;
+    }
+    .services-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--green-deep);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .services-header h2 em { color: var(--gold); font-style: italic; }
+    .services-header p {
+      font-size: 1.02rem;
+      color: var(--ink-light);
+      line-height: 1.75;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      border-top: 3px solid var(--green-light);
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .service-card:hover {
+      border-top-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lift);
+    }
+    .service-emoji {
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin-bottom: 0.35rem;
+    }
+    .service-hook {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+    .services-cta-strip {
+      background: var(--charcoal);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .services-cta-strip div p:first-child {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .services-cta-strip div p:last-child {
+      font-size: 0.88rem;
+      color: rgba(247,244,239,0.5);
+    }
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-cta-strip { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 500px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
     /* ─── PRINT ──────────────────────────────────────────────── */
     @media print {
       #sticky-bar, #lightbox, #lb-close, .scroll-hint { display: none !important; }
@@ -1431,6 +1531,97 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════
+     OTHER SERVICES
+══════════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="services-header anim">
+      <p class="section-label" style="justify-content:center;">Also From AP Systems</p>
+      <h2>Where Else We Find You <em>ROI</em></h2>
+      <p>We locate where your business is losing time, opportunities, or revenue — then design and implement systems that fix it. Here's what we build.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card anim d1">
+        <span class="service-emoji">⚡</span>
+        <h3>Speed-to-Lead System</h3>
+        <span class="service-hook">Every new lead contacted in seconds</span>
+        <p>We make sure every new lead is contacted instantly so no opportunity goes cold. The first business to respond wins — we make sure that's you.</p>
+      </div>
+
+      <div class="service-card anim d2">
+        <span class="service-emoji">📞</span>
+        <h3>Missed Call Text-Back</h3>
+        <span class="service-hook">Every missed call becomes a conversation</span>
+        <p>Every missed call turns into a conversation instead of lost business. The moment a call goes unanswered, the system texts back automatically.</p>
+      </div>
+
+      <div class="service-card anim d3">
+        <span class="service-emoji">🔁</span>
+        <h3>Lead Follow-Up Automation</h3>
+        <span class="service-hook">No lead gets forgotten</span>
+        <p>We ensure no lead gets forgotten — the system keeps following up over days and weeks until they engage. Most sales happen after the 5th touchpoint.</p>
+      </div>
+
+      <div class="service-card anim d1">
+        <span class="service-emoji">📅</span>
+        <h3>Appointment Booking System</h3>
+        <span class="service-hook">Interested leads become booked appointments</span>
+        <p>We turn interested leads into booked appointments automatically. As seen in this case study — 53 bookings in 14 days, zero manual scheduling.</p>
+      </div>
+
+      <div class="service-card anim d2">
+        <span class="service-emoji">🤖</span>
+        <h3>AI Voice &amp; Chat Qualification</h3>
+        <span class="service-hook">Only qualified prospects get booked</span>
+        <p>Only serious, qualified prospects get booked into your calendar. The AI screens leads before they reach you — so every call is worth your time.</p>
+      </div>
+
+      <div class="service-card anim d3">
+        <span class="service-emoji">📊</span>
+        <h3>Lead Reactivation System</h3>
+        <span class="service-hook">Your existing database becomes new revenue</span>
+        <p>We turn your existing database into new revenue without buying more ads. Your best leads are the ones who already raised their hand — we re-engage them.</p>
+      </div>
+
+      <div class="service-card anim d1">
+        <span class="service-emoji">🧠</span>
+        <h3>CRM Automation &amp; Integration</h3>
+        <span class="service-hook">Plugs into your current setup</span>
+        <p>We plug into your current setup — no need to change how you work. Whether you're on GHL, Monday, HubSpot, or a spreadsheet, we connect it all.</p>
+      </div>
+
+      <div class="service-card anim d2">
+        <span class="service-emoji">📩</span>
+        <h3>Multi-Channel Outreach</h3>
+        <span class="service-hook">Reach leads where they actually respond</span>
+        <p>We contact leads across SMS, email, and voice — where they're most likely to respond, not just one channel. More touchpoints, more conversions.</p>
+      </div>
+
+      <div class="service-card anim d3">
+        <span class="service-emoji">🚀</span>
+        <h3>Full Pipeline Automation</h3>
+        <span class="service-hook">Lead to booked call — no manual effort</span>
+        <p>We automate your entire pipeline so leads move from interest to booked calls without manual effort. From first contact to closed deal, the system runs it.</p>
+      </div>
+
+    </div>
+
+    <div class="services-cta-strip anim">
+      <div>
+        <p>Not sure where you're losing the most revenue?</p>
+        <p>We'll audit your current process and show you exactly where the gaps are — for free.</p>
+      </div>
+      <a href="https://calendly.com/adiorahonuora/new-meeting"
+         target="_blank" rel="noopener"
+         class="btn btn-gold">Book a Free Revenue Audit →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
      FOOTER CTA
 ══════════════════════════════════════════════════════════════ -->
 <section id="footer-cta">
@@ -1447,7 +1638,7 @@
         <a href="https://calendly.com/adiorahonuora/new-meeting"
            target="_blank" rel="noopener"
            class="btn btn-gold">Book a Free Strategy Call →</a>
-        <a href="https://apsystems.netlify.app"
+        <a href="https://apsystems.dev"
            target="_blank" rel="noopener"
            class="btn btn-outline-light">Visit AP Systems</a>
       </div>
@@ -1462,7 +1653,7 @@
                onmouseout="this.style.opacity='0.7'">
         </a>
         <span style="color:rgba(247,244,239,0.15);font-size:1.4rem;font-weight:300;">×</span>
-        <a href="https://apsystems.netlify.app" target="_blank" rel="noopener" style="line-height:0;">
+        <a href="https://apsystems.dev" target="_blank" rel="noopener" style="line-height:0;">
           <img src="ap-systems-logo copy.svg" alt="AP Systems"
                style="height:44px;width:auto;filter:brightness(0.6);transition:filter 0.2s;"
                onmouseover="this.style.filter='brightness(1)'"
